@@ -1,0 +1,9 @@
+---
+- name: Verificar PTFS instalados
+  ibm.power_ibmi.ibmi_cl_command:
+    cmd: "DSPPTF LICPGM(*ALL) OUTPUT(*PRINT)"
+  register: ptfs
+
+- name: Mostrar ptfs
+  ansible.builtin.debug:
+    var: ptfs

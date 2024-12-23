@@ -1,0 +1,6 @@
+---
+- name: Descargar ptfs totales
+  hosts: all
+
+  roles:
+    - descargar_ptfs_totales
